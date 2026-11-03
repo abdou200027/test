@@ -1,0 +1,360 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>UltraStream Patcher PREMIUM</title>
+<script>try{document.documentElement.setAttribute('data-theme',localStorage.getItem('us_theme')=='light'?'light':'dark')}catch(e){}</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--ff:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;
+--bg:#0d0f17;--cd:#141724;--bd:rgba(255,255,255,.08);--tx:#f3f4f6;--mu:#8e95ab;--a1:#6d5aff;--a2:#8b5cf6;--ac:#7c66ff;--pu:#7c66ff;--glow:rgba(109,90,255,.4);
+--ft:rgba(255,255,255,.04);--in:#0f1220;--lg:#090b13;--cb:rgba(255,255,255,.28);--sh:none;--g1:rgba(109,90,255,.14);--g2:rgba(139,92,246,.2);
+--ok:#34d399;--wn:#fbbf24;--er:#f87171;--cy:#22d3ee;--fd:#a78bfa;
+--chev:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c9cde0' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+[data-theme=light]{color-scheme:light;--bg:#f6f7fb;--cd:#fff;--bd:#e5e7eb;--tx:#111827;--mu:#6b7280;--a1:#5b46ff;--a2:#7c66ff;--ac:#5b46ff;--pu:#5b46ff;--glow:rgba(91,70,255,.35);
+--ft:#eef0f6;--in:#f9fafb;--lg:#f7f8fc;--cb:#c3c8d4;--sh:0 4px 20px rgba(0,0,0,.03);--g1:rgba(124,102,255,.16);--g2:rgba(167,139,250,.25);
+--ok:#059669;--wn:#b45309;--er:#dc2626;--cy:#0891b2;--fd:#6d5aff;
+--chev:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23374151' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*,*::before,*::after{box-sizing:inherit}[hidden]{display:none!important}
+body{margin:0;min-height:100vh;background:var(--bg) radial-gradient(700px 380px at 100% 0,var(--g1),transparent) no-repeat;color:var(--tx);font:15px/1.5 var(--ff);transition:background-color .25s,color .25s}
+body::before{content:"";position:fixed;top:-140px;right:-180px;width:640px;height:380px;border-radius:50%;background:linear-gradient(135deg,var(--g2),transparent 70%);filter:blur(34px);transform:rotate(-16deg);pointer-events:none;z-index:-1}
+.w{max-width:980px;margin:0 auto;padding:22px 14px 48px}
+h2{display:flex;align-items:center;gap:9px;margin:0 0 12px;font-size:16px;font-weight:700}h3{margin:12px 0 6px;font-size:13px;color:var(--mu);font-weight:600}
+.mu,small{color:var(--mu)}.mu{margin:6px 0}
+.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}.xl{width:40px;height:40px}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:14px}.br{display:flex;align-items:center;gap:14px;min-width:0}.br svg{width:50px;height:50px;flex:none;filter:drop-shadow(0 6px 14px var(--glow))}
+h1{margin:0;font-size:clamp(22px,5vw,30px);font-weight:800;letter-spacing:-.02em;line-height:1.15}h1 span{color:var(--ac)}.sub{margin:3px 0 0;font-size:13px;color:var(--mu)}
+.hr{display:flex;align-items:center;gap:10px;flex:none}
+.tg{position:relative;display:flex;justify-content:space-between;align-items:center;width:64px;height:32px;padding:0 3px;border-radius:999px;border:1px solid var(--bd);background:var(--ft);cursor:pointer;color:inherit;font-size:13px}
+.tg span{position:relative;z-index:1;width:24px;text-align:center;line-height:1}.tg i{position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:rgba(109,90,255,.3);border:1px solid rgba(109,90,255,.5);transform:translateX(32px);transition:transform .2s}
+[data-theme=light] .tg i{transform:none;background:#fff;box-shadow:0 1px 6px rgba(91,70,255,.35)}
+.ib{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;border:1px solid var(--bd);background:var(--ft);color:var(--tx);cursor:pointer;padding:0;transition:.15s}.ib:hover{border-color:var(--a1);color:var(--ac)}.ib.ok{color:var(--ok);border-color:var(--ok)}
+.pm{margin:14px 0 0}.pm summary{display:flex;flex-wrap:wrap;align-items:center;gap:10px;cursor:pointer;list-style:none;font-size:12px}.pm summary::-webkit-details-marker{display:none}.pm summary::after{content:"▾";color:var(--mu);transition:transform .2s}.pm[open] summary::after{transform:rotate(180deg)}
+.pm b{letter-spacing:.08em;color:var(--fd)}.pm em{font-style:normal;font-weight:700;padding:2px 10px;border-radius:99px;color:var(--ok);border:1px solid currentColor;background:var(--ft)}
+.navbar{display:flex;align-items:center;gap:8px;margin:18px 0}
+.t{flex:1;min-width:0;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:6px 4px 16px;margin:-6px -4px -16px}.t::-webkit-scrollbar{display:none}
+.t button,.more{flex:none;display:inline-flex;align-items:center;gap:7px;background:var(--ft);color:var(--tx);border:1px solid var(--bd);border-radius:999px;padding:9px 18px;font:600 14px/1.2 var(--ff);cursor:pointer;transition:.15s}
+.t button:hover,.more:hover{border-color:var(--a1)}.t .i{width:16px;height:16px}
+.t .on,.more.on{background:linear-gradient(135deg,var(--a1),var(--a2));border-color:transparent;color:#fff;box-shadow:0 4px 16px rgba(109,90,255,.4)}
+.more{width:40px;height:38px;padding:0;justify-content:center;font-size:18px;letter-spacing:1px}.mo{position:relative;flex:none}
+.menu{position:absolute;right:0;top:calc(100% + 8px);z-index:20;min-width:190px;padding:6px;background:var(--cd);border:1px solid var(--bd);border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.35)}
+.menu button{display:block;width:100%;text-align:left;background:none;border:0;border-radius:9px;padding:10px 12px;color:var(--tx);font:500 14px var(--ff);cursor:pointer}.menu button:hover{background:var(--ft)}.menu button.on{color:var(--ac);font-weight:700}
+.card{background:var(--cd);border:1px solid var(--bd);border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:var(--sh);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);transition:background-color .25s,border-color .25s}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}.g>.card{margin:0}.g+.card{margin-top:14px}.col{display:flex;flex-direction:column}
+.pg{display:none}.pg.on{display:block}
+#dz{display:flex;flex-direction:column;align-items:center;gap:4px;padding:38px 16px;text-align:center;cursor:pointer;border:1.5px dashed rgba(109,90,255,.35);margin-bottom:10px;transition:.2s}
+#dz .xl{color:var(--ac);stroke-width:1.5;margin-bottom:6px}#dz b{font-size:16px}#dz .mu{margin:0;font-size:13px}
+#dz:hover,#dz.hv,#dz:focus-visible{border-color:var(--a1);background:linear-gradient(var(--g1),var(--g1)),var(--cd);box-shadow:0 0 0 4px rgba(109,90,255,.12);outline:0}
+.fmr{text-align:center;margin-bottom:14px}.fmr .btn{margin:0}
+.sp{display:grid;grid-template-columns:1fr 1fr;gap:12px}.sp small{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.05em}.sp span{word-break:break-all;font-weight:600;color:var(--tx)}.rd{grid-column:1/-1}
+#sp:has(.es){display:flex;flex-direction:column;flex:1;margin:0}#sp .nf{font-weight:400;color:var(--mu)}
+.es{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:18px 0;min-height:150px}.es .xl{width:46px;height:46px;stroke-width:1.4;color:var(--mu);opacity:.65}#sp .es span{font-weight:400;color:var(--mu);font-size:13px;word-break:normal}
+.bar{height:8px;border-radius:9px;background:var(--ft);border:1px solid var(--bd);margin:4px 0;overflow:hidden}.bar i{display:block;height:100%;border-radius:9px}
+.wn{color:var(--wn);margin:4px 0;font-size:13px}
+select,input[type=text],input[type=password],input[type=datetime-local],textarea{width:100%;background:var(--in);color:var(--tx);border:1px solid var(--bd);border-radius:10px;padding:11px 12px;font:500 14px var(--ff);margin-bottom:8px;transition:.15s}
+select{appearance:none;-webkit-appearance:none;padding-right:40px;background:var(--in) var(--chev) no-repeat right 12px center/16px;cursor:pointer}option{background:var(--cd);color:var(--tx)}
+select:focus,input:focus,textarea:focus{outline:0;border-color:var(--a1);box-shadow:0 0 0 3px rgba(109,90,255,.18)}textarea{resize:vertical}
+label{display:block;margin:6px 0;font-size:13.5px;color:var(--mu)}
+label:has(>input[type=checkbox]){display:flex;align-items:flex-start;gap:10px;color:var(--tx);cursor:pointer;font-size:14px}label small{font-size:12px}
+input[type=checkbox]{appearance:none;-webkit-appearance:none;flex:none;display:inline-grid;place-content:center;width:18px;height:18px;margin:2px 0 0;border:1.5px solid var(--cb);border-radius:6px;background:transparent;accent-color:#6d5aff;cursor:pointer;transition:.15s}
+input[type=checkbox]:checked{background:linear-gradient(135deg,var(--a1),var(--a2));border-color:transparent}
+input[type=checkbox]:checked::after{content:"";width:9px;height:5px;margin-top:-1px;border:2px solid #fff;border-top:0;border-right:0;transform:rotate(-45deg)}
+input[type=checkbox]:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.hint{font-size:12.5px;margin:0 0 10px}.opt{margin-bottom:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,var(--a1),var(--a2));color:#fff;border:0;border-radius:10px;padding:11px 20px;font:600 15px/1.2 var(--ff);cursor:pointer;margin:6px 6px 6px 0;box-shadow:0 4px 16px var(--glow);transition:.15s}
+.btn:hover:not(:disabled){filter:brightness(1.08);transform:translateY(-1px)}.btn.ghost{background:transparent;color:var(--tx);border:1px solid var(--bd);box-shadow:none}.btn.sm{padding:8px 14px;font-size:13px}
+.btn:disabled{opacity:.45;cursor:not-allowed;box-shadow:none;filter:saturate(.5)}.go{width:100%;margin:auto 0 0;padding:13px 20px}.go .i{width:16px;height:16px}
+a.btn{text-decoration:none}a.btn:not([href]){opacity:.4;pointer-events:none}.lk{color:var(--ac)}
+.lh{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.lh h2{margin:0}
+#log,#zlg{font:12px/1.65 var(--mono);background:var(--lg);border:1px solid var(--bd);border-radius:12px;padding:12px;height:210px;overflow:auto}
+#log:empty::before{content:"Logs will appear here...";color:var(--mu)}
+.INFO{color:var(--cy)}.FOUND{color:var(--fd)}.PATCHED{color:var(--wn)}.SUCCESS{color:var(--ok)}.WARN{color:var(--wn)}.ERROR{color:var(--er)}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0}th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--bd)}th{color:var(--mu);font-weight:600}.ch{color:var(--wn);font-weight:600}
+.hx{font:12px/1.6 var(--mono);overflow-x:auto;white-space:pre;background:var(--lg);border:1px solid var(--bd);border-radius:10px;padding:8px}.hx i{color:var(--mu);font-style:normal}.hx b{color:#fff;background:rgba(109,90,255,.7);border-radius:3px}
+.cmp{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;border:1px solid var(--bd)}
+.sc{position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.35) 0 1px,transparent 1px 5px),radial-gradient(circle at 72% 30%,#22d3ee 0,transparent 28%),linear-gradient(135deg,#1b1040,#8b5cf6 60%,#f472b6)}
+.cl{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--p)) 0 0)}.bad{filter:blur(3.5px) saturate(.55) contrast(.85)}
+.ln{position:absolute;top:0;bottom:0;left:var(--p);width:2px;background:#fff;box-shadow:0 0 14px var(--a1)}
+.lb{position:absolute;bottom:10px;padding:3px 10px;border-radius:99px;background:rgba(9,10,15,.75);color:#fff;font-size:12px}.lb.l{left:10px}.lb.r{right:10px}
+#rg{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize}
+.ck{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--bd);color:var(--tx);font-size:14px}
+.ft{margin-top:22px;font-size:13px;color:var(--mu)}.warnbox{border-color:var(--wn);box-shadow:0 0 24px rgba(251,191,36,.15)}.warnbox h2{color:var(--wn)}.warnbox ul{margin:6px 0 0;padding-left:18px}.warnbox li{margin:5px 0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.chips span,.chips button{font:500 12px var(--ff);padding:3px 10px;border-radius:99px;border:1px solid var(--bd);color:var(--ok);background:var(--ft)}.chips button{cursor:pointer;color:var(--ac)}.chips button:hover{border-color:var(--a1)}
+@media(max-width:520px){.sub{font-size:12px}.br svg{width:42px;height:42px}}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="lgg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9b7bff"/><stop offset="1" stop-color="#5b46ff"/></linearGradient></defs>
+<symbol id="i-rk" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22 22 0 0 1-4 2z"/><path d="M9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"/></symbol>
+<symbol id="i-s" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+<symbol id="i-gr" viewBox="0 0 24 24"><path d="M12.2 2h-.4a2 2 0 0 0-2 2v.2a2 2 0 0 1-1 1.7l-.4.3a2 2 0 0 1-2 0l-.2-.1a2 2 0 0 0-2.7.7l-.2.4a2 2 0 0 0 .7 2.7l.2.1a2 2 0 0 1 1 1.7v.5a2 2 0 0 1-1 1.8l-.2.1a2 2 0 0 0-.7 2.7l.2.4a2 2 0 0 0 2.7.7l.2-.1a2 2 0 0 1 2 0l.4.3a2 2 0 0 1 1 1.7v.2a2 2 0 0 0 2 2h.4a2 2 0 0 0 2-2v-.2a2 2 0 0 1 1-1.7l.4-.3a2 2 0 0 1 2 0l.2.1a2 2 0 0 0 2.7-.7l.2-.4a2 2 0 0 0-.7-2.7l-.2-.1a2 2 0 0 1-1-1.8v-.5a2 2 0 0 1 1-1.7l.2-.1a2 2 0 0 0 .7-2.7l-.2-.4a2 2 0 0 0-2.7-.7l-.2.1a2 2 0 0 1-2 0l-.4-.3a2 2 0 0 1-1-1.7V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-tm" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="m7 9 3 3-3 3M13 15h4"/></symbol>
+<symbol id="i-cp" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="M12 13v8"/><path d="M4 14.9A7 7 0 1 1 15.7 8h1.8a4.5 4.5 0 0 1 2.5 8.2"/><path d="m8 17 4-4 4 4"/></symbol>
+<symbol id="i-f" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></symbol>
+<symbol id="i-pl" viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.9l12-7.5a1 1 0 0 0 0-1.7l-12-7.5A1 1 0 0 0 7 4.5z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-gh" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.3 6.4-1.5 6.4-7a5.4 5.4 0 0 0-1.5-3.8 5 5 0 0 0-.1-3.8s-1.2-.3-3.900 1.500a13.400 13.400 0 0 0-7 0C6.300 2.800 5.100 3.100 5.100 3.100a5 5 0 0 0-.1 3.800A5.400 5.400 0 0 0 3.500 10.700c0 5.400 3.300 6.600 6.400 7a3.400 3.400 0 0 0-.9 2.600V22"/></symbol></svg>
+<div class="w">
+<header class="hd"><div class="br"><svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="14" fill="url(#lgg)"/><path d="M4 18C4 9 10 4 20 4h8C38 4 44 9 44 18c-8-5-24-5-40 0z" fill="#fff" opacity=".16"/><path d="M19 14.5v19a1.5 1.5 0 0 0 2.300 1.300l15-9.500a1.500 1.500 0 0 0 0-2.600l-15-9.500A1.500 1.500 0 0 0 19 14.500z" fill="#fff"/></svg><div><h1>UltraStream <span>Patcher</span></h1><p class="sub">Patch &amp; customize your media files with ease</p></div></div>
+<div class="hr"><button class="tg" id="th" role="switch" aria-checked="false" aria-label="Toggle light theme"><span>☀️</span><span>🌙</span><i></i></button><a class="ib" href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><svg class="i"><use href="#i-gh"/></svg></a></div></header>
+<details class="pm"><summary><b>PREMIUM EDITION · RTX ENGINE 2.0</b><em>PREMIUM UNLOCKED</em></summary><div class="chips"><span>Unlimited file size</span><span>4K max resolution</span><span>120 FPS max framerate</span><span>Unlimited uploads</span><span>RTX Engine 2.0 + priority</span><span>Priority queue skip FPS check</span><span>Fast Processing</span></div><p class="mu hint">Patch MP4 container atoms in your browser. The file leaves this device only if you press Post to TikTok.</p></details>
+<div class="navbar"><nav class="t" id="nav"><button data-t="0" class="on"><svg class="i"><use href="#i-rk"/></svg>Optimizer Studio</button><button data-t="4">TikTok Auto-Post</button><button data-t="5">Pro Presets &amp; Suite</button><button data-t="1">Quality slider</button><button data-t="2" hidden>Upload checklist</button><button data-t="3" hidden>Metadata analyzer</button></nav>
+<div class="mo"><button class="more" id="mb" aria-haspopup="true" aria-expanded="false" aria-label="More tabs">⋯</button><div class="menu" id="mm" hidden><button data-g="2">Upload checklist</button><button data-g="3">Metadata analyzer</button></div></div></div>
+
+<section class="pg on" id="p0">
+<div id="dz" class="card" tabindex="0" role="button"><svg class="i xl"><use href="#i-up"/></svg><b>Drop an .mp4 or .mov here</b><div class="mu">or click to browse files</div><input id="fi" type="file" accept="video/mp4,video/quicktime,.mp4,.mov" hidden></div>
+<div class="fmr"><button class="btn ghost sm" id="fm">Browse via Files App (Bypass Android Gallery Compression)</button></div><input id="fi2" type="file" accept="*/*" hidden>
+<div class="g">
+<div class="card col"><h2><svg class="i"><use href="#i-s"/></svg>Pre-flight Inspector</h2><div id="sp" class="sp mu"><span class="nf">No file loaded.</span><div class="es"><svg class="i xl"><use href="#i-f"/></svg><span>Upload a file to start analysis</span></div></div></div>
+<div class="card col"><h2><svg class="i"><use href="#i-gr"/></svg>Patch mode</h2>
+<select id="mode"><option value="R" selected>Mode R: RTX-Style (Exact RTXFury Clone)</option><option value="A">Engine v3 Original (zero duration)</option><option value="B">Timescale Spoofer</option><option value="C">Deep Clean (faststart + strip + zero)</option></select>
+<p id="md" class="mu hint"></p>
+<div id="oa" class="opt"><select id="val" aria-label="Duration value"><option value="0">Write duration 0</option><option value="1">Write duration 1</option></select><label><input type="checkbox" id="all"><span>Also patch tkhd and mdhd</span></label></div>
+<div id="ob" class="opt" hidden><select id="k" aria-label="Timescale factor"><option value="10">Timescale ×10</option><option value="100">Timescale ×100</option><option value="1000">Timescale ×1000</option></select></div>
+<label><input type="checkbox" id="hdr"><span>Strip HDR10+ / Color Metadata <small>(colr, mdcv, clli → free)</small></span></label><label><input type="checkbox" id="sf"><span>Skip FPS Check <small>(4K / 120 FPS bypass)</small></span></label><label id="rpl"><input type="checkbox" id="rep" checked><span>Repair broken mdat size header</span></label>
+<button class="btn go" id="go" disabled><svg class="i"><use href="#i-pl"/></svg>Patch video</button></div>
+</div>
+<div id="sam" class="card warnbox" hidden></div><div class="card"><div class="lh"><h2><svg class="i"><use href="#i-tm"/></svg>Atom Inspector log</h2><button class="ib" id="cpl" aria-label="Copy logs" title="Copy logs"><svg class="i"><use href="#i-cp"/></svg></button></div><div id="log" role="log"></div></div>
+<div id="out" class="card" hidden><h2>Result</h2>
+<a class="btn" id="dl" download>Download patched file</a><button class="btn" id="tk">Post to TikTok…</button><button class="btn ghost" id="ver">Verify hex from output</button><button class="btn ghost" id="rst">Restore original view</button>
+<table id="tb"></table>
+<div class="g"><div><h3>mvhd atom before</h3><div class="hx" id="hB"></div></div><div><h3>mvhd atom after</h3><div class="hx" id="hA"></div></div></div></div>
+</section>
+<section class="pg" id="p1"><div class="card"><h2>Before / after quality</h2>
+<div class="cmp" id="cmp" style="--p:50%"><div class="sc"></div><div class="cl"><div class="sc bad"></div></div><i class="ln"></i><span class="lb l">540p · compressed</span><span class="lb r">4K · bypassed</span><input type="range" id="rg" min="2" max="98" value="50" aria-label="Drag to compare"></div>
+<p class="mu">Illustrative simulation of compression artifacts. It is not a measurement of your file.</p></div></section>
+
+<section class="pg" id="p2"><div class="card"><h2>Upload checklist</h2><div class="bar"><i id="pb" style="width:0;background:var(--ok)"></i></div><small id="pt">0 of 5 done</small><div id="ck"></div></div></section>
+
+<section class="pg" id="p3"><div class="g"><div class="card"><h2>Video specs</h2><div id="an" class="sp mu">Load a file in Optimizer Studio first.</div></div>
+<div class="card"><h2>Suggested upload windows</h2><table><tr><th>When</th><th>Why</th></tr><tr><td>Weekdays, 6–9 PM</td><td>After-work scrolling peak</td></tr><tr><td>Saturday, 9–11 AM</td><td>Relaxed weekend browsing</td></tr><tr><td>Sunday, 4–7 PM</td><td>Pre-week wind-down</td></tr></table><p class="mu">General guidance in your audience’s local time. Check your own analytics.</p></div></div></section>
+<section class="pg" id="p4"><div class="g"><div class="card"><h2>Zernio connection</h2>
+<label>Zernio API key<input type="password" id="zk" autocomplete="off" placeholder="Bearer key"></label><small><a class="lk" href="https://zernio.com" target="_blank" rel="noopener">Get free API key — 2 accounts free</a></small>
+<label>API base URL<input type="text" id="zb" value="https://zernio.com/api/v1"></label>
+<label><input type="checkbox" id="zx"> Send API calls through a CORS proxy</label><input type="text" id="zpx" value="https://corsproxy.io/?url=" aria-label="CORS proxy prefix"><small>The proxy sees your API key, so use your own worker if you can. The video upload never goes through it.</small><br>
+<button class="btn" id="zc">Connect / Fetch TikTok Accounts</button><button class="btn ghost" id="zn">Connect New TikTok Account</button>
+<select id="za" aria-label="TikTok account"><option value="">No accounts loaded</option></select><label>Account ID (manual fallback)<input type="text" id="zm" placeholder="acc_..."></label></div>
+<div class="card"><h2>TikTok post</h2><p class="mu" id="zf">Load a video in Optimizer Studio first.</p>
+<textarea id="zt" rows="4" maxlength="2200" placeholder="Caption"></textarea><small id="zct">0 / 2200</small><div class="chips" id="zh"></div>
+<select id="zv" aria-label="Privacy level"><option value="PUBLIC_TO_EVERYONE">Public (recommended)</option><option value="MUTUAL_FOLLOW_FRIENDS">Friends (mutual follows)</option><option value="SELF_ONLY">Only me</option><option value="DRAFT">Send to TikTok Drafts</option></select>
+<small>Accounts connected through TikTok’s Business app accept Public or Drafts only, per Zernio docs.</small>
+<label><input type="checkbox" id="zac" checked> Allow comments</label><label><input type="checkbox" id="zad" checked> Allow duet</label><label><input type="checkbox" id="zas" checked> Allow stitch</label><label><input type="checkbox" id="zai"> AI-generated content disclosure</label>
+<label>Schedule (optional, your local time)<input type="datetime-local" id="zs"></label>
+<label><input type="checkbox" id="zcf" checked> I confirm the TikTok content preview and consent (TikTok requires this)</label>
+<label>Upload source<select id="zsrc"><option value="o">Original file (recommended: API posts skip the app’s own compression)</option><option value="p">Patched file</option></select></label><button class="btn" id="zpost" disabled>Post to TikTok</button><p class="mu">Zernio says it may transcode for TikTok, so this does not guarantee zero re-encode.</p></div></div>
+<div class="card"><h2>Upload status</h2><div class="bar"><i id="zpb" style="width:0;background:var(--ok)"></i></div><small id="zpt">Idle</small><div id="zlg" style="height:150px;margin-top:8px" role="log"></div><div class="hx" id="zr" hidden></div></div></section>
+
+<section class="pg" id="p5"><div class="g"><div class="card"><h2>HandBrake preset</h2><p class="mu">TikTok 4K and 1080p, 60 fps CFR, H.264 RF 18, 22 Mbps VBV cap, faststart. Import with Presets, Import. HandBrake cannot tone-map HDR to SDR, so run the FFmpeg tone-map below first on HDR10+ clips.</p><button class="btn" data-d="hb">Download .json</button></div>
+<div class="card"><h2>Topaz Video AI</h2><p class="mu">Proteus or Rhea 4K upscale plus Chronos interpolation. Topaz has no public preset schema, so the JSON is a settings sheet with ready CLI commands.</p><select id="tmo"><option value="prob-4">Proteus (prob-4)</option><option value="rhea-1">Rhea (rhea-1)</option></select><select id="tfp"><option value="60">60 fps</option><option value="120">120 fps</option></select><button class="btn" data-d="tp">Download .json</button><button class="btn ghost" data-c="tv">Copy FFmpeg command</button></div>
+<div class="card"><h2>Colour correction LUT</h2><p class="mu">33-point .cube: S-curve contrast plus vibrance. HDR sources get a tone-map first in the FFmpeg chain. Sharpening runs in FFmpeg because a LUT cannot sharpen.</p><button class="btn" data-d="cu">Download .cube</button><button class="btn ghost" data-c="ch">Copy FFmpeg (HDR source)</button><button class="btn ghost" data-c="cs">Copy FFmpeg (SDR source)</button></div></div>
+<div class="card"><h2>FFmpeg commands</h2><div class="hx" id="fc"></div></div></section>
+<p class="ft">Patching edits container metadata only; the video stream is never re-encoded. Platforms may still transcode, and results vary by app version.</p>
+</div>
+<script>
+const $=s=>document.querySelector(s),CONT=['moov','trak','mdia','minf','stbl','edts','udta'];
+const f4=(d,o)=>String.fromCharCode(d.getUint8(o),d.getUint8(o+1),d.getUint8(o+2),d.getUint8(o+3));
+const hx=(n,w=8)=>'0x'+n.toString(16).toUpperCase().padStart(w,'0'),u64=(d,o)=>Number(d.getBigUint64(o)),gd=(d,o,w)=>w?u64(d,o):d.getUint32(o);
+const sd=(d,o,w,v)=>{if(!w&&v>4294967295)throw Error('32-bit field overflow. Use a smaller factor.');w?d.setBigUint64(o,BigInt(v)):d.setUint32(o,v)};
+const mb=n=>(n/1048576).toFixed(2)+' MB',esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const CODEC={avc1:'H.264 (AVC)',avc3:'H.264 (AVC)',hvc1:'HEVC (H.265)',hev1:'HEVC (H.265)',av01:'AV1',vp09:'VP9'};
+function log(t,m){const e=document.createElement('div');e.className=t;e.textContent=`[${t}] ${m}`;const L=$('#log');L.append(e);L.scrollTop=L.scrollHeight}
+// Top-level box scan using File.slice: never loads the whole file.
+async function scanTop(f){const out=[];let o=0;while(o+8<=f.size){const d=new DataView(await f.slice(o,o+16).arrayBuffer());let z=d.getUint32(0),h=8;const t=f4(d,4);if(z==1&&d.byteLength>=16){z=u64(d,8);h=16}
+if(z==0||o+z>f.size){log('WARN',`${t} box header ${z?`declares ${z} B which exceeds file size (${f.size} B)`:'has open-ended size 0'} — switching to Deep Binary Signature Scanner...`);out.push({t,off:o,z:f.size-o,h,bad:true,decl:z});break}
+if(z<h)break;out.push({t,off:o,z,h});o+=z}return out}
+// A real moov: plausible size that fits the file, with an mvhd child near the start.
+async function chkMoov(f,p){if(p<4)return null;const b=new DataView(await f.slice(p-4,p+4100).arrayBuffer()),z=b.getUint32(0);if(z<8||p-4+z>f.size)return null;for(let i=8;i+4<=b.byteLength&&i<z;i++)if(b.getUint8(i)==0x6D&&b.getUint8(i+1)==0x76&&b.getUint8(i+2)==0x68&&b.getUint8(i+3)==0x64)return{t:'moov',off:p-4,z,h:8};return null}
+// Chunked signature scan (4 MB slices), last chunk first so a tail moov is found at once.
+async function deepScan(f){const CH=4194304;for(let s=Math.floor((f.size-1)/CH)*CH;s>=0;s-=CH){const u=new Uint8Array(await f.slice(s,Math.min(f.size,s+CH+8)).arrayBuffer()),c=[];for(let i=u.indexOf(0x6D);i!==-1;i=u.indexOf(0x6D,i+1))if(u[i+1]==0x6F&&u[i+2]==0x6F&&u[i+3]==0x76)c.push(s+i);for(let k=c.length-1;k>=0;k--){const r=await chkMoov(f,c[k]);if(r)return r}}return null}
+function walk(d,s,e,cb,path=''){let p=s;while(p+8<=e){let z=d.getUint32(p),h=8;const t=f4(d,p+4);if(z==1){z=u64(d,p+8);h=16}else if(!z)z=e-p;if(z<h||p+z>e)break;cb({t,p,z,h,path,b:p+h});if(CONT.includes(t))walk(d,p+h,p+z,cb,path+'/'+t);p+=z}}
+// Version 0: 32-bit fields. Version 1: 64-bit creation/modification/duration.
+function fld(d,x){const w=d.getUint8(x.b)==1;return x.t=='tkhd'?{w,dO:x.b+(w?28:20)}:{w,ts:x.b+(w?20:12),dO:x.b+(w?24:16)}}
+function analyze(buf){const d=new DataView(buf),r={mv:null,tk:[],md:[],el:[],co:[],codec:'Unknown',w:0,h:0,bx:[],hdr:[],col:null};
+let cu={};walk(d,0,buf.byteLength,x=>{r.bx.push(x);if(x.t=='trak')cu={};if(x.t=='stsz'&&cu.v&&cu.d)r.fps=d.getUint32(x.b+8)*cu.s/cu.d;const f=['mvhd','tkhd','mdhd'].includes(x.t)?fld(d,x):null;
+if(x.t=='mvhd')r.mv={x,f,ts:d.getUint32(f.ts),dur:gd(d,f.dO,f.w)};
+else if(x.t=='tkhd'){const wd=d.getUint32(x.b+(f.w?88:76))/65536,ht=d.getUint32(x.b+(f.w?92:80))/65536;r.tk.push({x,f,dur:gd(d,f.dO,f.w)});if(wd&&!r.w){r.w=wd;r.h=ht}}
+else if(x.t=='mdhd'){const ts=d.getUint32(f.ts),du=gd(d,f.dO,f.w);r.md.push({x,f,ts,dur:du});cu.s=ts;cu.d=du}
+else if(x.t=='elst')r.el.push(x);else if(x.t=='stco'||x.t=='co64')r.co.push(x);
+else if(x.t=='stsd'){const c=CODEC[f4(d,x.b+12)];if(c){cu.v=1;r.codec=c;const e=x.b+8,ez=d.getUint32(e);walk(d,e+86,Math.min(e+ez,x.p+x.z),y=>{r.hdr.push(y);if(y.t=='colr'&&f4(d,y.b)=='nclx')r.col={pr:d.getUint16(y.b+4),tr:d.getUint16(y.b+6)}},'/stsd')}}});return r}
+function patch(buf,mode,o){const d=new DataView(buf),a=analyze(buf),ch=[];
+const z=(f,l,v)=>{const old=gd(d,f.dO,f.w);sd(d,f.dO,f.w,v);ch.push(`${l} duration ${old} → ${v} (${hx(v)})`)};
+if(mode=='B'){const K=o.k,m=a.mv;sd(d,m.f.ts,m.f.w,m.ts*K);ch.push(`mvhd timescale ${m.ts} → ${m.ts*K}`);z(m.f,'mvhd',m.dur*K);
+a.tk.forEach((t,i)=>z(t.f,'tkhd#'+i,t.dur*K));
+a.el.forEach(x=>{const w=d.getUint8(x.b)==1,n=d.getUint32(x.b+4);let p=x.b+8;for(let i=0;i<n;i++){sd(d,p,w,gd(d,p,w)*K);p+=w?20:12}ch.push(`elst: ${n} segment(s) scaled ×${K}`)})}
+else if(mode!='R'){z(a.mv.f,'mvhd',o.val);if(o.all){a.tk.forEach((t,i)=>z(t.f,'tkhd#'+i,o.val));a.md.forEach((t,i)=>z(t.f,'mdhd#'+i,o.val))}}
+if(o.hdr)for(const y of a.hdr)if(['colr','mdcv','clli'].includes(y.t)){for(let i=0;i<4;i++)d.setUint8(y.p+4+i,'free'.charCodeAt(i));ch.push(`${y.t} → free (${y.z} B color tag neutralised)`)}
+if(mode=='C'){for(const x of a.bx)if(x.path=='/moov'&&(x.t=='udta'||x.t=='meta')){for(let i=0;i<4;i++)d.setUint8(x.p+4+i,'free'.charCodeAt(i));ch.push(`${x.t} → free (${x.z} B neutralised)`)}
+if(o.fs>=0){for(const x of a.co){const w=x.t=='co64',n=d.getUint32(x.b+4);for(let i=0;i<n;i++){const p=x.b+8+i*(w?8:4),c=gd(d,p,w);if(c>=o.fs)sd(d,p,w,c+buf.byteLength)}}ch.push(`faststart: moov moved to ${hx(o.fs)}, ${a.co.length} chunk table(s) shifted +${buf.byteLength} B`)}}
+return ch}
+const hv=(a,b)=>{let h='';for(let i=0;i<a.length;i+=16){h+=`<div><i>${i.toString(16).padStart(4,'0')}</i>  `;for(let j=i;j<Math.min(i+16,a.length);j++){const x=a[j].toString(16).padStart(2,'0');h+=b&&b[j]!==a[j]?`<b>${x}</b> `:x+' '}h+='</div>'}return h};
+const mr=a=>[['mvhd timescale',a.mv.ts],['mvhd duration',a.mv.dur],['tkhd duration (#0)',a.tk[0]?a.tk[0].dur:'–'],['mdhd timescale (#0)',a.md[0]?a.md[0].ts:'–'],['mdhd duration (#0)',a.md[0]?a.md[0].dur:'–']];
+// Mode R: moov tree rewrite (RTXFury-style container fingerprint)
+const RC=['moov','trak','mdia','minf','stbl','edts','udta'],TE=new TextEncoder(),rtv=b=>new DataView(b.buffer,b.byteOffset,b.byteLength),rtk=(n,t)=>n.c.find(x=>x.t==t),rtc=n=>n.c?{t:n.t,c:n.c.map(rtc)}:{t:n.t,b:n.b.slice()};
+const rtp=(u,s,e)=>{const d=rtv(u),r=[];let p=s;while(p+8<=e){let z=d.getUint32(p),h=8;const t=String.fromCharCode(u[p+4],u[p+5],u[p+6],u[p+7]);if(z==1){z=Number(d.getBigUint64(p+8));h=16}else if(!z)z=e-p;if(z<h||p+z>e)break;r.push(RC.includes(t)?{t,c:rtp(u,p+h,p+z)}:{t,b:u.slice(p+h,p+z)});p+=z}return r};
+const rtz=n=>8+(n.c?n.c.reduce((s,x)=>s+rtz(x),0):n.b.length),rta=(n,f)=>{f(n);if(n.c)n.c.forEach(x=>rta(x,f))};
+const rtw=(n,u,o)=>{new DataView(u.buffer).setUint32(o,rtz(n));u.set(TE.encode(n.t),o+4);let p=o+8;if(n.c)for(const x of n.c)p=rtw(x,u,p);else{u.set(n.b,p);p+=n.b.length}return p};
+function rtx(pb,a,c){const L=[],M=rtp(new Uint8Array(pb),0,pb.byteLength)[0],V=rtv,tr=M.c.filter(x=>x.t=='trak'),hd=t=>rtk(rtk(t,'mdia'),'hdlr'),ty=t=>String.fromCharCode(...hd(t).b.subarray(8,12)),tid=t=>{const k=rtk(t,'tkhd');return V(k.b).getUint32(k.b[0]==1?20:12)};
+// per track: zero times, tkhd flags 3, tkhd duration rescaled to timescale 1000, clean edts/elst, mdhd language, hdlr strings
+for(const t of tr){const kh=rtk(t,'tkhd'),dh=rtk(rtk(t,'mdia'),'mdhd'),kw=kh.b[0]==1,dw=dh.b[0]==1,dv=V(dh.b);
+for(const x of[kh,dh])x.b.fill(0,4,x.b[0]==1?20:12);kh.b[1]=0;kh.b[2]=0;kh.b[3]=3;
+const ts=dv.getUint32(dw?20:12),du=dw?Number(dv.getBigUint64(24)):dv.getUint32(16),td=ts?Math.round(du*1000/ts):0;
+kw?V(kh.b).setBigUint64(28,BigInt(td)):V(kh.b).setUint32(20,td);
+dv.setUint16(dw?32:20,0x15C7);dv.setUint16(dw?34:22,0); // 0x15C7 is what the RTXFury dump holds; it decodes as 'eng' ('und' would be 0x55C4)
+t.c=t.c.filter(x=>x.t!='edts');
+if(td){const eb=new Uint8Array(20),ev=V(eb);ev.setUint32(4,1);ev.setUint32(8,td);ev.setUint32(16,65536);t.c.splice(t.c.indexOf(kh)+1,0,{t:'edts',c:[{t:'elst',b:eb}]})}
+const h=hd(t),k=ty(t),n=k=='vide'?'VideoHandler':k=='soun'?'SoundHandler':String.fromCharCode(...h.b.subarray(24)).replace(/\0[\s\S]*/,'')||'Handler',nb=new Uint8Array(21+n.length);nb.set(h.b.subarray(8,12),8);nb.set(TE.encode(n),20);h.b=nb}
+L.push(`${tr.length} track(s): timestamps zeroed, tkhd flags 3, tkhd duration → timescale 1000 + edts/elst, mdhd lang 0x15C7, hdlr rewritten`);M.c=M.c.filter(x=>x.t!='udta'&&x.t!='meta');
+const au=tr.find(t=>ty(t)=='soun'),nid=Math.max(...tr.map(tid))+1;let ph=null,N=0;
+if(au){ph={t:'trak',c:au.c.filter(x=>x.t!='edts'&&x.t!='udta').map(rtc)};const tk=rtk(ph,'tkhd');V(tk.b).setUint32(tk.b[0]==1?20:12,nid);
+const sb=rtk(rtk(rtk(ph,'mdia'),'minf'),'stbl'),g=t=>rtk(sb,t),zs=g('stsz'),sv=V(zs.b),ss=sv.getUint32(4),cnt=sv.getUint32(8);N=9*cnt;
+const nz=new Uint8Array(12+4*(cnt+N)),nv=V(nz);nv.setUint32(8,cnt+N);for(let i=0;i<cnt;i++)nv.setUint32(12+4*i,ss||sv.getUint32(12+4*i));for(let i=0;i<N;i++)nv.setUint32(12+4*(cnt+i),8);zs.b=nz;
+const ap=(x,len,vals)=>{const o=x.b,n=new Uint8Array(o.length+len),v=V(n);n.set(o);v.setUint32(4,v.getUint32(4)+1);vals.forEach((q,i)=>v.setUint32(o.length+4*i,q));x.b=n};
+const co=sb.c.find(x=>x.t=='stco'||x.t=='co64'),w=co.t=='co64'?8:4,cc=V(co.b).getUint32(4);ap(g('stts'),8,[N,1]);ap(g('stsc'),12,[cc+1,N,1]);
+const o2=co.b,n2=new Uint8Array(o2.length+w);n2.set(o2);V(n2).setUint32(4,cc+1);co.b=n2;ph.last=co;M.c.splice(M.c.indexOf(tr[tr.length-1])+1,0,ph);L.push(`ghost audio track #${nid}: ${cnt} → ${cnt+N} samples, ${N} × 8 B filler after mdat`)}
+else L.push('No audio track found: ghost track skipped.');
+const mv=rtk(M,'mvhd'),mo=mv.b,v0=mo[0]==0,rs=mo.subarray(v0?20:32),nb=new Uint8Array(32+rs.length);nb[0]=1;V(nb).setUint32(20,1000);nb.fill(255,24,32);nb.set(rs,32);if(au)V(nb).setUint32(nb.length-4,nid+1);mv.b=nb;L.push('mvhd v'+(v0?0:1)+' → v1, timescale 1000, duration → 0xFFFFFFFFFFFFFFFF');
+const br=['isom','iso2',...(/H\.264/.test(a.codec)?['avc1']:[]),'mp41'],F=c.keep?null:new Uint8Array(16+4*br.length);
+if(F){V(F).setUint32(0,F.length);F.set(TE.encode('ftypisom'),4);V(F).setUint32(12,512);br.forEach((b,i)=>F.set(TE.encode(b),16+4*i));L.push('ftyp → isom/512 + '+br.join(', '))}
+// final layout: ftyp | moov | mdat (8-byte header when it fits) | ghost filler. co64 → stco whenever every offset fits 32 bits.
+const pl=c.payLen,fl=F?F.length:c.ins,mdh=new Uint8Array(pl+8<=4294967295?8:16),dm=V(mdh),w32=fl+rtz(M)+mdh.length+pl<4294967295,T=w32?'stco':'co64',W=w32?4:8,cn=[];
+if(mdh.length==8)dm.setUint32(0,pl+8);else{dm.setUint32(0,1);dm.setBigUint64(8,BigInt(pl+16))}mdh.set(TE.encode('mdat'),4);
+rta(M,n=>{if(n.t=='stco'||n.t=='co64')cn.push(n)});const n64=cn.filter(n=>n.t=='co64').length;
+for(const n of cn){const v=V(n.b),k=v.getUint32(4),w=n.t=='co64'?8:4;n.o=[];for(let i=0;i<k;i++)n.o.push(w==8?Number(v.getBigUint64(8+8*i)):v.getUint32(8+4*i));n.t=T;n.b=new Uint8Array(8+W*k);V(n.b).setUint32(4,k)}
+const tot=rtz(M),base=fl+tot+mdh.length,tOff=base+pl;
+for(const n of cn){const v=V(n.b),k=n.o.length;for(let i=0;i<k;i++){const gh=ph&&n===ph.last&&i==k-1,p=n.o[i];if(!gh&&(p<c.ps||p>=c.ps+pl))throw Error(`Chunk offset ${hx(p)} is outside the mdat payload. Mode R needs one contiguous mdat.`);const q=gh?tOff:p-c.ps+base;W==8?v.setBigUint64(8+8*i,BigInt(q)):v.setUint32(8+4*i,q)}}
+const nm=new Uint8Array(tot);rtw(M,nm,0);const tl=new Uint8Array(N?8*N+8:0);for(let i=0;i<N;i++)tl.set([0,0,0,4,0,0,0,0],8*i);if(N)tl.set([0,0,0,8,102,114,101,101],8*N);
+L.push(`mdat header ${c.h} → ${mdh.length} B, ${pl} B payload isolated; dropped: ${c.drop.join(', ')||'nothing'}`);if(n64&&w32)L.push(`${n64} co64 → stco`);
+L.push(`moov rebuilt: ${tot} B, ${cn.length} chunk table(s) as ${T}, ghost chunk at ${hx(tOff)}`);return{nm,F,mh:mdh,tr:tl,log:L}}
+let S={};
+async function load(f){S={file:f};$('#dl').removeAttribute('href');zsync();$('#log').innerHTML='';$('#out').hidden=true;$('#go').disabled=true;
+log('INFO',`Loaded ${f.name} (${mb(f.size)})`);log('INFO','Scanning MP4 atoms...');
+try{$('#rpl').hidden=true;$('#sam').hidden=true;const top=await scanTop(f);top.forEach(b=>log('FOUND',`${b.t} box at offset ${hx(b.off)} (${b.z} B)`));
+let mo=top.find(b=>b.t=='moov');
+if(!mo){log('INFO','moov not in the top-level chain. Scanning the last 32 MB first, then the whole file...');mo=await deepScan(f);if(mo){top.push(mo);log('FOUND',`moov box at offset ${hx(mo.off)} (${mo.z} B) via deep scan`)}}
+if(!mo){const bd=top.find(b=>b.bad&&b.decl>f.size);throw Error(bd?`moov is missing. ${bd.t} declares ${mb(bd.decl)} but this copy is only ${mb(f.size)} (${Math.round(f.size/bd.decl*100)}%). The picker delivered a truncated file. Re-pick it with “Browse via Files App”.`:'No moov atom found. This is not a valid MP4/MOV.')}
+const md0=top.find(b=>b.t=='mdat');S.bad=!!(md0&&mo.off>md0.off&&(md0.bad||md0.off+md0.z>mo.off));
+if(S.bad){$('#rpl').hidden=false;log('WARN',`mdat header declares ${md0.decl||md0.z} B but moov starts at ${hx(mo.off)}. Repair is available.`)}
+if(mo.z>2.5e8)throw Error('moov atom is too large to patch in the browser.');
+if(top.some(b=>b.t=='moof'))log('WARN','Fragmented MP4 detected. Only the movie header is patched.');
+const orig=await f.slice(mo.off,mo.off+mo.z).arrayBuffer(),a=analyze(orig);if(!a.mv)throw Error('mvhd atom not found inside moov.');
+Object.assign(S,{top,mo,orig,a});log('FOUND',`mvhd v${a.mv.f.w?1:0}, ${a.tk.length} tkhd, ${a.md.length} mdhd, codec ${a.codec}`);
+await inspect(f,a,top,mo);$('#go').disabled=false}catch(e){log('ERROR',e.message)}}
+async function inspect(f,a,top,mo){const u=URL.createObjectURL(f);
+const v=await new Promise(r=>{const e=document.createElement('video');e.preload='metadata';e.muted=true;const t=setTimeout(()=>r(null),3000);e.onloadedmetadata=()=>{clearTimeout(t);r({w:e.videoWidth,h:e.videoHeight,d:e.duration})};e.onerror=()=>{clearTimeout(t);r(null)};e.src=u});URL.revokeObjectURL(u);
+if(!v)log('WARN','Browser could not decode a preview. Using atom values.');
+const W=(v&&v.w)||a.w,H=(v&&v.h)||a.h,D=(v&&isFinite(v.d)&&v.d>0)?v.d:a.mv.dur/a.mv.ts,mbps=f.size*8/D/1e6,r=W/H,g=(x,y)=>y?g(y,x%y):x,k=g(W,H)||1;
+const asp=!W?'?':Math.abs(r-9/16)<.01?'9:16':Math.abs(r-16/9)<.01?'16:9':Math.abs(r-1)<.01?'1:1':`${W/k}:${H/k}`;
+let s=100;const wn=[];
+if(mbps>40){s-=30;wn.push('Bitrate is over 40 Mbps. Re-encode lower or expect transcoding.')}
+if(asp!='9:16'){s-=15;wn.push('Aspect ratio is not 9:16.')}
+if(Math.min(W,H)<1080){s-=15;wn.push('Short side is under 1080 px.')}
+if($('#sf').checked)log('INFO','FPS and resolution check skipped (Premium bypass).');else{if(a.fps>60.5){s-=15;wn.push('Frame rate is over 60 fps. Many apps re-encode high frame rate uploads.')}if(Math.max(W,H)>3840){s-=10;wn.push('Resolution is above 4K. Expect downscaling.')}}
+if(/HEVC|AV1|VP9/.test(a.codec)){s-=10;wn.push(a.codec+' is more likely to be re-encoded. H.264 is safest.')}
+const cc=a.col,hdr=!!(cc&&(cc.tr==16||cc.tr==18||cc.pr==9))||a.hdr.some(y=>y.t=='mdcv'||y.t=='clli'),sam=a.bx.some(y=>y.t=='smta'||y.t=='auth'),hp=hdr&&sam&&cc&&cc.tr==16,hn=hdr?((cc&&cc.tr==16?'PQ':cc&&cc.tr==18?'HLG':'BT.2020')+(hp?' (likely HDR10+)':'')):'SDR / untagged';
+if(hdr){s-=20;wn.push('HDR color tags found. Some apps re-encode HDR uploads.')}
+const md=top.find(b=>b.t=='mdat'),col=s>=80?'var(--ok)':s>=55?'var(--wn)':'var(--er)';
+const h=[['File',f.name],['Size',mb(f.size)],['Resolution',`${W}×${H}${Math.max(W,H)>=3840?' (4K)':''}`],['Aspect ratio',asp],['Est. bitrate',mbps.toFixed(1)+' Mbps'],['Duration',D.toFixed(2)+' s'],['Frame rate',a.fps?a.fps.toFixed(2)+' fps':'unknown'],['Codec',a.codec],['HDR / color',hn],['moov position',md&&mo.off>md.off?'End of file':'Start of file']].map(([k,v])=>`<div><small>${k}</small><span>${esc(v)}</span></div>`).join('')+`<div class="rd"><small>TikTok readiness</small><div class="bar"><i style="width:${s}%;background:${col}"></i></div><span>${s} / 100</span>${wn.map(w=>`<p class="wn">${esc(w)}</p>`).join('')}</div>`;
+$('#sp').innerHTML=h;$('#an').innerHTML=h;wn.forEach(w=>log('WARN',w));
+const sb=$('#sam');sb.hidden=!(hdr||mbps>40||sam);if(!sb.hidden)sb.innerHTML=`<h2>${hp||sam?'Samsung / HDR10+ clip detected':'High bitrate or HDR clip'}</h2><p>${mbps.toFixed(0)} Mbps, ${esc(a.codec)}, ${hn}.</p><ul><li>Platforms commonly transcode HDR and very high bitrate uploads. A patched moov changes metadata only. The stream stays at ${mbps.toFixed(0)} Mbps, so re-encoding is still likely.</li><li>“Strip HDR / color metadata” renames colr, mdcv and clli to free. The stream still holds its HDR data, including any HDR10+ SEI, so colors can look flat.</li><li>For dependable results, re-shoot: Camera, Settings, Advanced video options. Turn off HDR10+ and High efficiency video, then record 1080p at 30 or 60 fps.</li></ul>`}
+$('#go').onclick=async()=>{const{file,top,mo,orig,a}=S,mode=$('#mode').value,t0=performance.now();
+try{const o={val:+$('#val').value,all:$('#all').checked,k:+$('#k').value,fs:-1,hdr:$('#hdr').checked},md=top.find(b=>b.t=='mdat');
+if(mode=='C'){const ins=top[0].t=='ftyp'?top[0].z:0;if(md&&mo.off>md.off&&ins<=md.off)o.fs=ins;else log('INFO','moov is already before mdat. Faststart skipped.')}
+log('INFO',`Applying mode ${mode}...`);const pb=orig.slice(0),ch=patch(pb,mode,o);ch.forEach(c=>log('PATCHED',c));
+let R_=null;if(mode=='R'){if(!md)throw Error('Mode R needs an mdat box.');if(top.filter(b=>b.t=='mdat').length>1)throw Error('Mode R supports a single mdat box only.');const ins=top[0].t=='ftyp'?top[0].z:0,ps=md.off+md.h,pe=S.bad?mo.off:md.off+md.z,drop=top.filter(b=>b!==md&&b!==mo&&b.off>=ins).map(b=>b.t),keep=!!ins&&(await file.slice(8,12).text())=='qt  ';R_=rtx(pb,a,{ins,keep,ps,payLen:pe-ps,h:md.h,drop});Object.assign(R_,{ins,ps,pe});o.fs=R_.F?R_.F.length:ins;R_.log.forEach(c=>log('PATCHED',c))}
+const reps=[];if(S.bad&&$('#rep').checked&&mode!='R'){const nz=mo.off-md.off,u=new Uint8Array(md.h),dv=new DataView(u.buffer);u.set([109,100,97,116],4);if(md.h==16){dv.setUint32(0,1);dv.setBigUint64(8,BigInt(nz))}else{if(nz>4294967295)throw Error('mdat too large for a 32-bit header.');dv.setUint32(0,nz)}reps.push({off:md.off,u});log('PATCHED',`mdat size header ${md.decl||md.z} → ${nz} (${hx(nz)})`)}
+const seg=(a,b)=>{const r=[];let p=a;for(const x of reps){const e=x.off+x.u.length;if(x.off>=a&&e<=b){if(x.off>p)r.push(file.slice(p,x.off));r.push(x.u);p=e}}if(b>p)r.push(file.slice(p,b));return r};
+const parts=R_?[R_.F?R_.F:file.slice(0,R_.ins),R_.nm,R_.mh,file.slice(R_.ps,R_.pe),R_.tr]:o.fs>=0?[...seg(0,o.fs),pb,...seg(o.fs,mo.off),...seg(mo.off+mo.z,file.size)]:[...seg(0,mo.off),pb,...seg(mo.off+mo.z,file.size)];
+const blob=new Blob(parts,{type:'video/mp4'});if(!R_&&blob.size!==file.size)log('WARN',`Output is ${blob.size} B, input was ${file.size} B.`);
+const a2=analyze(R_?R_.nm.buffer:pb),A=[...mr(a),['moov offset',hx(mo.off)],['file size',mb(file.size)]],B=[...mr(a2),['moov offset',hx(o.fs>=0?o.fs:mo.off)],['file size',mb(blob.size)]];
+$('#tb').innerHTML='<tr><th>Field</th><th>Before</th><th>After</th></tr>'+A.map((r,i)=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td${r[1]!=B[i][1]?' class="ch"':''}>${B[i][1]}</td></tr>`).join('');
+S.before=new Uint8Array(orig,a.mv.x.p,a.mv.x.z);S.after=new Uint8Array(R_?R_.nm.buffer:pb,a2.mv.x.p,a2.mv.x.z);S.blob=blob;
+{const dl=$('#dl');if(dl.href)URL.revokeObjectURL(dl.href);dl.href=URL.createObjectURL(blob);dl.download=outName();S.zd=!a2.mv.dur;if(R_)$('#zsrc').value='p';zsync()}
+$('#hB').innerHTML=hv(S.before,S.after);$('#hA').innerHTML=hv(S.after,S.before);$('#out').hidden=false;
+log('SUCCESS',`Compression bypass applied in ${Math.round(performance.now()-t0)} ms. Video stream untouched.`)}catch(e){log('ERROR',e.message)}};
+$('#ver').onclick=async()=>{try{const t=await scanTop(S.blob),m=t.find(b=>b.t=='moov')||await deepScan(S.blob),b=await S.blob.slice(m.off,m.off+m.z).arrayBuffer(),a=analyze(b);
+$('#hA').innerHTML=hv(new Uint8Array(b,a.mv.x.p,a.mv.x.z),S.before);log('SUCCESS',`Re-read output file: mvhd duration = ${a.mv.dur}, moov at ${hx(m.off)}`)}catch(e){log('ERROR',e.message)}};
+$('#rst').onclick=()=>{S.blob=null;$('#dl').removeAttribute('href');zsync();$('#out').hidden=true;log('INFO','Patched output discarded. The original file was never modified.')};
+const outName=()=>S.file.name.replace(/\.[^.]+$/,'')+'_ultrastream.mp4';
+const MD={A:'Sets the movie header duration to the value below. Zero duration can break seeking in some players.',B:'Multiplies the movie timescale and durations (mvhd, tkhd, edit lists). Playback length stays identical.',C:'Moves moov to the front, neutralises udta and meta, then zeroes durations. Pure JavaScript, no FFmpeg.wasm needed.',R:'Exact RTXFury clone: keeps only ftyp + moov + mdat (sefd, udta, meta, free are stripped), 8-byte mdat header, co64 → stco, mvhd v1 with timescale 1000 and an unbounded duration, tkhd flags 3 with rescaled durations plus clean edts/elst, mdhd lang 0x15C7, VideoHandler/SoundHandler, and a ghost third audio track (10× samples) whose filler sits right after mdat. Video and audio streams are untouched.'};
+$('#mode').onchange=()=>{const m=$('#mode').value;$('#md').textContent=MD[m];$('#oa').hidden=m=='B'||m=='R';$('#ob').hidden=m!='B'};$('#mode').onchange();
+const dz=$('#dz'),fi=$('#fi');dz.onclick=()=>fi.click();dz.onkeydown=e=>{if(e.key=='Enter'||e.key==' '){e.preventDefault();fi.click()}};
+fi.onchange=()=>fi.files[0]&&load(fi.files[0]);$('#fm').onclick=()=>$('#fi2').click();$('#fi2').onchange=e=>e.target.files[0]&&load(e.target.files[0]);
+['dragover','dragenter'].forEach(n=>dz.addEventListener(n,e=>{e.preventDefault();dz.classList.add('hv')}));
+['dragleave','drop'].forEach(n=>dz.addEventListener(n,e=>{e.preventDefault();dz.classList.remove('hv')}));
+dz.addEventListener('drop',e=>e.dataTransfer.files[0]&&load(e.dataTransfer.files[0]));
+$('#nav').onclick=e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('#nav button,.pg').forEach(x=>x.classList.remove('on'));b.classList.add('on');$('#p'+b.dataset.t).classList.add('on')};
+$('#rg').oninput=e=>$('#cmp').style.setProperty('--p',e.target.value+'%');
+const CK=['Upload from TikTok Web on desktop, or from the Files app on iOS.','Do not add TikTok sounds, filters, or effects after patching.','Set visibility to Everyone before posting.','Upload the patched file, not the original.','Keep the video H.264, 1080×1920, 30–60 fps.'];
+$('#ck').innerHTML=CK.map((t,i)=>`<label class="ck"><input type="checkbox"><span>${t}</span></label>`).join('');
+$('#ck').onchange=()=>{const n=document.querySelectorAll('#ck input:checked').length;$('#pb').style.width=n/CK.length*100+'%';$('#pt').textContent=`${n} of ${CK.length} done`};
+
+const ls=(k,v)=>{try{if(v===undefined)return localStorage.getItem(k)||'';localStorage.setItem(k,v)}catch(e){}return ''};
+//<GEN>
+const dm=()=>S.a&&S.a.w>S.a.h?[3840,2160]:[2160,3840];
+const hbP=(n,m)=>({AlignAVStart:true,AudioCopyMask:['copy:aac'],AudioEncoderFallback:'av_aac',AudioLanguageList:[],AudioList:[{AudioBitrate:192,AudioCompressionLevel:-1,AudioEncoder:'av_aac',AudioMixdown:'stereo',AudioNormalizeMixLevel:false,AudioSamplerate:'48',AudioTrackGainSlider:0,AudioTrackDRCSlider:0,AudioTrackQuality:-1,AudioTrackQualityEnable:false}],AudioSecondaryEncoderMode:true,AudioTrackSelectionBehavior:'first',ChapterMarkers:false,ChildrenArray:[],Default:false,FileFormat:'av_mp4',Folder:false,FolderOpen:false,Mp4HttpOptimize:true,Mp4iPodCompatible:false,PictureAllowUpscaling:false,PictureAutoCrop:false,PictureCombDetectPreset:'off',PictureDeblockPreset:'off',PictureDeinterlaceFilter:'off',PictureDenoiseFilter:'off',PictureDetelecine:'off',PictureHeight:m,PictureWidth:m,PictureKeepRatio:true,PictureModulus:2,PicturePAR:'auto',PictureSharpenFilter:'off',PresetDescription:'UltraStream: TikTok sweet spot for HDR10+ HEVC phone clips. CFR 60, RF 18, 22 Mbps VBV cap, faststart.',PresetName:n,Type:1,UsesPictureFilters:true,UsesPictureSettings:2,VideoEncoder:'x264',VideoFramerate:'60',VideoFramerateMode:'cfr',VideoLevel:'5.2',VideoOptionExtra:'vbv-maxrate=22000:vbv-bufsize=44000',VideoPreset:'slow',VideoProfile:'high',VideoQualitySlider:18,VideoQualityType:2,VideoTune:'',VideoTwoPass:false,VideoTurboTwoPass:false,x264Option:'',x264UseAdvancedOptions:false});
+const hbJ=()=>JSON.stringify({PresetList:[hbP('UltraStream TikTok 4K60 CFR RF18',3840),hbP('UltraStream TikTok 1080p60 CFR RF18',1920)],VersionMajor:11,VersionMicro:0,VersionMinor:0},null,2);
+const tvF=(m,fps)=>{const[W,H]=dm();return `ffmpeg -hide_banner -nostdin -y -i "in.mp4" -sws_flags spline+accurate_rnd+full_chroma_int -filter_complex "tvai_up=model=${m}:scale=0:w=${W}:h=${H}:${m=='prob-4'?'preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:':''}blend=0.2:device=0:vram=1:instances=1,tvai_fi=model=chr-2:fps=${fps}:device=0:vram=1:instances=1,scale=w=${W}:h=${H}:flags=lanczos:threads=0" -c:v libx264 -preset slow -crf 18 -maxrate 22M -bufsize 44M -r ${fps} -fps_mode cfr -pix_fmt yuv420p -movflags +faststart -c:a aac -b:a 192k "out_${H>W?H:W}_${fps}fps.mp4"`};
+const tpJ=()=>JSON.stringify({generator:'UltraStream Patcher PREMIUM',note:'Topaz publishes no preset schema. This is a settings sheet plus tvai CLI commands. Params differ per model; confirm in the Topaz GUI log.',presets:[['prob-4','Proteus',60],['prob-4','Proteus',120],['rhea-1','Rhea',60],['rhea-1','Rhea',120]].map(([m,n,f])=>({name:`UltraStream ${n} 4K ${f}fps`,enhance:{filter:'tvai_up',model:m,target:dm().join('x'),blend:0.2},interpolation:{filter:'tvai_fi',model:'chr-2',fps:f},output:{container:'mp4',encoder:'H.264 yuv420p',crf:18,maxrate:'22M'},ffmpeg:tvF(m,f)}))},null,2);
+const cubeT=n=>{const L=['TITLE "UltraStream TikTok Pop"',`LUT_3D_SIZE ${n}`,'DOMAIN_MIN 0 0 0','DOMAIN_MAX 1 1 1'],cl=x=>Math.min(1,Math.max(0,x)),ct=x=>x+.35*(x*x*(3-2*x)-x);
+for(let b=0;b<n;b++)for(let g=0;g<n;g++)for(let r=0;r<n;r++){let c=[r,g,b].map(v=>ct(v/(n-1)));const y=.2126*c[0]+.7152*c[1]+.0722*c[2],k=1+.35*(1-(Math.max(...c)-Math.min(...c)));c=c.map(v=>cl(y+(v-y)*k));L.push(c.map(v=>v.toFixed(6)).join(' '))}return L.join('\n')+'\n'};
+const TM='zscale=t=linear:npl=1000,format=gbrpf32le,zscale=p=bt709,tonemap=tonemap=mobius:desat=0,zscale=t=bt709,';
+const cuF=h=>`ffmpeg -i "in.mp4" -vf "${h?TM:''}format=gbrp16le,lut3d=file=UltraStream_TikTok.cube,zscale=m=709:r=tv,format=yuv420p,unsharp=5:5:0.5:5:5:0.0" -r 60 -fps_mode cfr -c:v libx264 -preset slow -crf 18 -maxrate 22M -bufsize 44M -colorspace bt709 -color_primaries bt709 -color_trc bt709 -movflags +faststart -c:a aac -b:a 192k "out_tiktok.mp4"`;
+//</GEN>
+const sv=(n,t,m)=>{const u=URL.createObjectURL(new Blob([t],{type:m})),a=document.createElement('a');a.href=u;a.download=n;a.style.display='none';document.body.append(a);a.click();setTimeout(()=>{a.remove();URL.revokeObjectURL(u)},6e4)};
+const rc=()=>{$('#fc').textContent=`# Topaz (${$('#tmo').value}, ${$('#tfp').value} fps)\n${tvF($('#tmo').value,+$('#tfp').value)}\n\n# LUT, HDR source (tone-map first)\n${cuF(1)}\n\n# LUT, SDR source\n${cuF(0)}`};rc();$('#tmo').onchange=$('#tfp').onchange=rc;document.querySelector('[data-t="5"]').addEventListener('click',rc);
+const DL={hb:()=>sv('UltraStream_TikTok_HandBrake.json',hbJ(),'application/json'),tp:()=>sv('UltraStream_Topaz_Presets.json',tpJ(),'application/json'),cu:()=>sv('UltraStream_TikTok.cube',cubeT(33),'text/plain')},CP={tv:()=>tvF($('#tmo').value,+$('#tfp').value),ch:()=>cuF(1),cs:()=>cuF(0)};
+document.querySelectorAll('[data-d]').forEach(b=>b.onclick=DL[b.dataset.d]);
+document.querySelectorAll('[data-c]').forEach(b=>b.onclick=async()=>{const t=CP[b.dataset.c]();try{await navigator.clipboard.writeText(t);b.textContent='Copied'}catch(e){$('#fc').textContent=t;b.textContent='Select and copy below'}});
+$('#sf').onchange=()=>S.a&&inspect(S.file,S.a,S.top,S.mo);
+
+// Zernio
+const zlog=(t,m)=>{const e=document.createElement('div');e.className=t;e.textContent=`[${t}] ${m}`;const L=$('#zlg');L.append(e);L.scrollTop=L.scrollHeight},zprog=(p,t)=>{$('#zpb').style.width=p+'%';$('#zpt').textContent=t||p+'%'};
+[['zk'],['zb'],['zm'],['zpx']].forEach(([i])=>{const e=$('#'+i),v=ls('us_'+i);if(v)e.value=v;e.addEventListener('input',()=>ls('us_'+i,e.value))});
+$('#zx').checked=ls('us_zx')=='1';$('#zx').onchange=()=>ls('us_zx',$('#zx').checked?'1':'0');
+const zapi=async(p,o={})=>{const u=$('#zb').value.trim().replace(/\/+$/,'')+p,url=$('#zx').checked?$('#zpx').value.trim()+encodeURIComponent(u):u;let r;
+try{r=await fetch(url,{...o,headers:{Authorization:'Bearer '+$('#zk').value.trim(),'Content-Type':'application/json'}})}catch(e){throw Error(`Request blocked (${e.message}). Likely CORS: turn on the proxy toggle or serve this file from an allowed origin.`)}
+const t=await r.text();let j=t;try{j=JSON.parse(t)}catch(e){}
+if(!r.ok)throw Error(`HTTP ${r.status}${r.status==401?' (bad API key)':''}: ${(typeof j=='string'?j:JSON.stringify(j)).slice(0,500)}`);return j};
+const zt=$('#zt'),cc=()=>$('#zct').textContent=zt.value.length+' / 2200';zt.oninput=cc;
+$('#zh').innerHTML=['#fyp','#foryou','#viral','#4k','#cinematic','#trending'].map(h=>`<button type="button">${h}</button>`).join('');
+$('#zh').onclick=e=>{const b=e.target.closest('button');if(b&&zt.value.length+b.textContent.length+1<=2200){zt.value+=(zt.value&&!/\s$/.test(zt.value)?' ':'')+b.textContent;cc()}};
+let ZP='';
+$('#zc').onclick=async()=>{try{zlog('INFO','Fetching profiles and accounts...');
+const[p,a]=await Promise.allSettled([zapi('/profiles'),zapi('/accounts')]);if(p.status!='fulfilled'&&a.status!='fulfilled')throw a.reason;
+const ar=x=>x.status!='fulfilled'?[]:Array.isArray(x.value)?x.value:x.value.accounts||x.value.profiles||x.value.data||[],pr=ar(p),ac=ar(a),m=new Map();ZP=(pr[0]&&(pr[0]._id||pr[0].id))||'';
+[...ac,...pr].filter(e=>e.platform=='tiktok'||(!e.platform&&e.username)).forEach(e=>{const id=e.accountId||e._id||e.id;id&&m.set(id,'@'+(e.username||e.displayName||id))});
+$('#za').innerHTML=m.size?[...m].map(([i,n])=>`<option value="${esc(i)}">${esc(n)} (${esc(i)})</option>`).join(''):'<option value="">No TikTok accounts found</option>';
+zlog(m.size?'SUCCESS':'WARN',m.size?`${m.size} TikTok account(s) loaded.`:'No TikTok accounts. Use Connect New TikTok Account or paste an Account ID.')}catch(e){zlog('ERROR',e.message)}};
+$('#zn').onclick=async()=>{try{if(!ZP){const p=await zapi('/profiles'),l=Array.isArray(p)?p:p.profiles||p.data||[];ZP=(l[0]&&(l[0]._id||l[0].id))||''}
+if(!ZP)throw Error('No profile ID found. Create a profile in the Zernio dashboard first.');
+const j=await zapi('/connect/tiktok?profileId='+encodeURIComponent(ZP)),u=j.authUrl||j.url||j.connectUrl;if(!u)throw Error('No auth URL in response: '+JSON.stringify(j).slice(0,300));
+zlog('INFO','TikTok authorization URL: '+u);if(!window.open(u,'_blank'))zlog('WARN','Popup blocked. Copy the URL above into a new tab.')}catch(e){zlog('ERROR',e.message)}};
+$('#tk').onclick=()=>document.querySelector('#nav [data-t="4"]').click();
+$('#zpost').onclick=async()=>{const src=$('#zsrc').value,b=src=='p'?S.blob:S.file,acc=$('#zm').value.trim()||$('#za').value,pv=$('#zv').value,dr=pv=='DRAFT',btn=$('#zpost');
+if(!b)return zlog('ERROR',src=='p'?'Patch a video first.':'Load a video first.');if(src=='p'&&S.zd)zlog('WARN','The patched header has duration 0. TikTok may reject it (file_format_check_failed). Try the original file.');if(!$('#zk').value.trim())return zlog('ERROR','Add your Zernio API key.');if(!acc)return zlog('ERROR','Pick an account or paste an Account ID.');if(!$('#zcf').checked)return zlog('ERROR','Tick the TikTok preview and consent box.');
+btn.disabled=true;$('#zr').hidden=true;
+try{const n=(src=='p'?outName():S.file.name).replace(/[^\w.\-]+/g,'_'),ct=b.type||'video/mp4',pf=o=>zapi('/media/presign',{method:'POST',body:JSON.stringify(o)});
+zprog(3,'Step 1/3: presign');let ps;try{ps=await pf({filename:n,contentType:ct,size:b.size})}catch(e){if(!/HTTP (400|422)/.test(e.message))throw e;zlog('WARN','Presign rejected the size field. Retrying without it.');ps=await pf({filename:n,contentType:ct})}
+if(!ps.uploadUrl||!ps.publicUrl)throw Error('Presign response is missing uploadUrl or publicUrl: '+JSON.stringify(ps).slice(0,300));zlog('INFO','Step 1 done. Public URL: '+ps.publicUrl);
+await new Promise((ok,no)=>{const x=new XMLHttpRequest();x.open('PUT',ps.uploadUrl);x.setRequestHeader('Content-Type',ct);x.upload.onprogress=e=>{if(e.lengthComputable){const q=Math.round(e.loaded/e.total*100);zprog(q,`Step 2/3: uploading ${q}%`)}};x.onload=()=>x.status<300?ok():no(Error(`Upload HTTP ${x.status}: ${(x.responseText||'').slice(0,200)}`));x.onerror=()=>no(Error('Upload failed. Network error, or CORS on the storage host.'));x.send(b)});
+zlog('SUCCESS','Step 2 done. Uploaded '+mb(b.size)+'.');zprog(100,'Step 3/3: creating post');
+const ts={privacy_level:dr?'SELF_ONLY':pv,allow_comment:$('#zac').checked,allow_duet:$('#zad').checked,allow_stitch:$('#zas').checked,content_preview_confirmed:true,express_consent_given:true};if(dr)ts.draft=true;if($('#zai').checked)ts.video_made_with_ai=true;
+const body={content:zt.value,mediaItems:[{url:ps.publicUrl,type:'video'}],platforms:[{platform:'tiktok',accountId:acc}],tiktokSettings:ts},sc=$('#zs').value;
+if(sc){body.scheduledFor=new Date(sc).toISOString();body.timezone=Intl.DateTimeFormat().resolvedOptions().timeZone}else body.publishNow=true;
+const r=await zapi('/posts',{method:'POST',body:JSON.stringify(body)}),id=(r.post&&(r.post._id||r.post.id))||r._id||r.id||'unknown';
+zlog('SUCCESS','Step 3 done. Post ID: '+id);zprog(100,'Done');$('#zr').hidden=false;$('#zr').textContent=JSON.stringify(r,null,2)}catch(e){zlog('ERROR',e.message);zprog(0,'Failed')}
+btn.disabled=false};
+function zsync(){const p=$('#zsrc').value=='p',ok=!!S.file&&(!p||!!S.blob);$('#zpost').disabled=!ok;$('#zpost').textContent=p?'Post Patched Video to TikTok':'Post Original Video to TikTok';$('#zf').textContent=!S.file?'Load a video in Optimizer Studio first.':p?(S.blob?`${outName()} · ${mb(S.blob.size)}${S.zd?' · duration 0 in header':''}`:'Patch the video first.'):`${S.file.name} · ${mb(S.file.size)}`}
+$('#zsrc').onchange=zsync;zsync();
+</script>
+<script>
+(()=>{const q=s=>document.querySelector(s),r=document.documentElement,th=q('#th');
+const ap=v=>{r.setAttribute('data-theme',v);th.setAttribute('aria-checked',v=='light');try{localStorage.setItem('us_theme',v)}catch(e){}};
+th.setAttribute('aria-checked',r.getAttribute('data-theme')=='light');
+th.onclick=()=>ap(r.getAttribute('data-theme')=='light'?'dark':'light');
+const mb=q('#mb'),mm=q('#mm'),mo=v=>{mm.hidden=!v;mb.setAttribute('aria-expanded',v)},
+sync=()=>{const a=q('#nav [data-t="2"].on,#nav [data-t="3"].on');mb.classList.toggle('on',!!a);mm.querySelectorAll('button').forEach(b=>b.classList.toggle('on',!!a&&a.dataset.t==b.dataset.g))};
+mb.onclick=e=>{e.stopPropagation();mo(mm.hidden)};
+mm.onclick=e=>{const b=e.target.closest('button');if(b){q('#nav [data-t="'+b.dataset.g+'"]').click();mo(false)}};
+document.addEventListener('click',e=>{if(!mm.contains(e.target))mo(false);sync()});
+document.addEventListener('keydown',e=>{if(e.key=='Escape')mo(false)});
+const cb=q('#cpl');cb.onclick=async()=>{const t=q('#log').innerText;
+try{await navigator.clipboard.writeText(t)}catch(e){const x=document.createElement('textarea');x.value=t;document.body.append(x);x.select();try{document.execCommand('copy')}catch(_){}x.remove()}
+cb.classList.add('ok');setTimeout(()=>cb.classList.remove('ok'),1200)};
+})();
+</script></body></html>
